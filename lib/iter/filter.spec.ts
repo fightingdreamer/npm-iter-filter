@@ -9,7 +9,7 @@ test.each([
     fn: (v: any) => [1, 3, 5].includes(v),
     expected: [1, 3, 5],
   },
-])("filter($value, $divider) -> $expected", ({ value, fn, expected }) => {
+])("filter($value, ...) -> $expected", ({ value, fn, expected }) => {
   const ivalue = value[Symbol.iterator]();
   expect(Array.from(filter(ivalue, fn))).toEqual(expected);
 });
