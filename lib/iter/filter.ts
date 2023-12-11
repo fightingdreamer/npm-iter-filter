@@ -1,3 +1,7 @@
+/**
+  Filter items of iterator
+  @returns iterator over filtered items
+*/
 export function* filter<T>(
   iterator: Iterable<T>,
   callbackFn: (item: T, index: number) => boolean,
